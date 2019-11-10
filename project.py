@@ -62,8 +62,8 @@ def main():
 		toOneHot(r)
 
 	data2 = pd.DataFrame(dlist, columns=list(data.columns))
-	data2.drop('HOURS')
-	data.to_csv("./data/1.onehots")
+	data2 = data2.drop('HOURS', 1)
+	data2.to_csv("./data/1.onehots")
 	# print(data2)
 
 
